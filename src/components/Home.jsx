@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react'
-import { Button, Card, Col, Container, Row } from 'react-bootstrap'
+import React, {useEffect} from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
 import Restaurants from './Restaurants'
 import { getRestaurants } from '../redux/restaurantSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
 
-  const [menu, setMenu] = useState(10);
+  // const [menu, setMenu] = useState(10);
 
   const dispatch = useDispatch();
 
@@ -67,13 +67,13 @@ function Home() {
   //   description:"This is the best restaurant in town"
   // }
 
-  const handleMenuIncrement = ()=>{
-    setMenu(menu + 1);
-  }
+  // const handleMenuIncrement = ()=>{
+  //   setMenu(menu + 1);
+  // }
 
-  const handleMenuDecrement = ()=>{
-    setMenu(menu - 1);
-  }
+  // const handleMenuDecrement = ()=>{
+  //   setMenu(menu - 1);
+  // }
 
 
 

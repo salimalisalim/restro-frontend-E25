@@ -21,7 +21,7 @@ function Users() {
             
         try {
             
-          const res = await axios.get("http://localhost:4000/api/v1/users", {
+          const res = await axios.get("https://restroapp-backend-e25.onrender.com/api/v1/users", {
             withCredentials:true,
           });
   

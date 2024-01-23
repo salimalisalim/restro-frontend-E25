@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react' 
 import { Card, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -12,7 +12,7 @@ function RestaurantDetails() {
   const {id} = useParams();
 
 
-  const restaurant = restaurants.find((rest) => rest._id == id);
+  const restaurant = restaurants.find((rest) => rest._id === id);
 
 
   return (
