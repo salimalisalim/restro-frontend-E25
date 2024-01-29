@@ -4,6 +4,7 @@ import { Button, Col, Container, Row , Form} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import instance from '../axios';
 
 
 
@@ -27,7 +28,7 @@ function Register() {
       setValidated(true);
       try {
 
-        let res = await axios.post('https://restroapp-backend-e25.onrender.com/api/v1/register', {
+        let res = await instance.post('/api/v1/register', {
           fullname,
           email:userEmail,
           password:userPassword

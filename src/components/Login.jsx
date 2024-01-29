@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import {userAuthSuccess} from "../redux/userAuth";
 import { useDispatch } from 'react-redux';
+import instance from '../axios';
 
 
 function Login() {
@@ -31,7 +32,7 @@ function Login() {
 
             try {
 
-                let res = await axios.post('https://restroapp-backend-e25.onrender.com/api/v1/login',{
+                let res = await instance.post('/api/v1/login',{
                   email:userEmail,
                   password:userPassword
                 }, {

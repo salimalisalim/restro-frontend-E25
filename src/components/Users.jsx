@@ -7,6 +7,7 @@ import {PencilSquare} from "react-bootstrap-icons";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DeleteUser from './DeleteUser';
+import instance from '../axios';
 
 function Users() {
 
@@ -21,7 +22,7 @@ function Users() {
             
         try {
             
-          const res = await axios.get("https://restroapp-backend-e25.onrender.com/api/v1/users", {
+          const res = await instance.get("/api/v1/users", {
             withCredentials:true,
           });
   

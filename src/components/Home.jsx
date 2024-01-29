@@ -42,7 +42,7 @@ function Home() {
     const getRestaurantsList = async()=>{
 
       try {
-        const res = await instance.get('api/v1/restaurants');
+        const res = await instance.get('/api/v1/restaurants');
 
         if(!res.data.success){
           toast.error(res.data.message);

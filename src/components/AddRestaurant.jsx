@@ -37,7 +37,7 @@ function AddRestaurant() {
 
           try {
 
-            const res = await instance.post('https://restroapp-backend-e25.onrender.com/api/v1/add',formData, {
+            const res = await instance.post('/api/v1/add',formData, {
               headers:{
                 'Content-Type':'multipart/form-data',
               },
